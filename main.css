@@ -1,0 +1,15 @@
+.blue {
+    color: blue;
+}
+
+.large {
+    font-size: 25px;
+}
+
+.bordered {
+    border: 1px dashed black;
+}
+
+.rounded {
+    border-radius: 5px;
+}
