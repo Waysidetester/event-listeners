@@ -103,5 +103,5 @@ document.getElementById("add-rounding").addEventListener("click", function() {
   elements in one function.
  */
 document.querySelector("body").addEventListener("click", function(event) {
-    console.log("You clicked on the body of the DOM")
+    console.log("You clicked on the body of the DOM");
 })
