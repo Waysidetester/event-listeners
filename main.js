@@ -26,10 +26,10 @@ const printToDom = (divId, stringToPrint) => {
 
 // Builds Bootstrap cards
 const buildNewToDoCard = (task, information) => {
-    let domString = `<div class="card" style="width: 18rem;">
+    let domString = `<div class="card m-5 flex-fill" style="width: 18rem;">
         <div class="card-body">
         <h5 class="card-title">${task}</h5>
-        <p class="card-text">${information}</p>
+        <p class="card-text text-muted">${information}</p>
         <button type="button" class="btn btn-danger removeMe">X</button>
         </div>
     </div>`;
@@ -43,13 +43,11 @@ submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     let todo = toDoInput.value
     let noteValue = notes.value
-    if (todo !== '' && noteValue !== '') {
+    if (todo !== '' && noteValue !== ''){
         buildNewToDoCard(todo, noteValue);
-        console.log('to do:',todo);
-        console.log('notes:',noteValue);
         toDoInput.value = null;
         notes.value = null;
     } else {
-        console.log('try again');
+        
     }
 })

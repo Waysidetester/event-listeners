@@ -9,19 +9,20 @@
     <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body>
-    <form>
+  
+    <form class="mx-auto mt-4" style="width: 600px;">
       <div class="form-group">
-        <label for="toDoInput">To Do</label>
-        <input type="text" class="form-control" id="toDoInput" aria-describedby="emailHelp" placeholder="Task to Complete">
+        <label for="toDoInput">To Do:</label>
+        <input type="text" class="form-control bg-dark text-white" id="toDoInput" aria-describedby="emailHelp" placeholder="Task to Complete">
       </div>
       <div class="form-group">
-        <label for="notes">Notes</label>
-        <textarea class="form-control" id="notes" rows="3"  placeholder="Notes..."></textarea>
+        <label for="notes">Notes:</label>
+        <textarea class="form-control bg-dark text-white" id="notes" rows="3"  placeholder="Notes..."></textarea>
       </div>
       <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
     </form>
-    
-    <div id="toDoCards"></div>
+
+  <div id="toDoCards" class="d-flex flex-wrap justify-content-center"></div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
    crossorigin="anonymous"></script>
