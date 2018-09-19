@@ -13,8 +13,8 @@ notes.setAttribute('autocomplete', 'off');
 const activateDeletes = () => {
     const removeButton = document.getElementsByClassName('removeMe');
     for (i = 0; i < removeButton.length; i++) {
-        removeButton[i].addEventListener('click', () => {
-            console.log('Tried to Delete');
+        removeButton[i].addEventListener('click', (e) => {
+            e.target.parentNode.parentNode.remove();
         })
     }
 };
@@ -38,14 +38,18 @@ const buildNewToDoCard = (task, information) => {
     activateDeletes();
 };
 
-// translate form info to DOM string
+// On button press: translate form info to DOM string
 submitButton.addEventListener('click', (e) => {
     e.preventDefault();
     let todo = toDoInput.value
     let noteValue = notes.value
-    buildNewToDoCard(todo, noteValue);
-    console.log('to do:',todo);
-    console.log('notes:',noteValue);
-    toDoInput.value = null;
-    notes.value = null;
+    if (todo !== '' && noteValue !== '') {
+        buildNewToDoCard(todo, noteValue);
+        console.log('to do:',todo);
+        console.log('notes:',noteValue);
+        toDoInput.value = null;
+        notes.value = null;
+    } else {
+        console.log('try again');
+    }
 })
