@@ -1,0 +1,11 @@
+body {
+    background-color: lightblue;
+}
+
+#exampleFormControlTextarea1 {
+    resize: none;
+}
+
+#removeMe {
+    border-radius: 50%;
+}
