@@ -6,6 +6,6 @@ body {
     resize: none;
 }
 
-#removeMe {
+.removeMe {
     border-radius: 50%;
 }
